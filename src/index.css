@@ -1,13 +1,112 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Amiri&family=Cardo&family=Comfortaa&family=EB+Garamond&family=Lato&family=Libre+Baskerville&family=Lora&family=Merriweather&family=Montserrat&family=Open+Sans&family=PT+Sans&family=Roboto&family=Roboto+Slab&family=Source+Sans+Pro&family=Source+Serif+Pro&family=Zilla+Slab&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary: #20232A;
+  --secondary: #553bcb;
+  --nav: #22262a;
+  --bg: #282C34;
+}
+
+.font-sm {
+  font-size: 13px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+body {
+  color: #f8f8f8;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  
+}
+
+.whole-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.primary-color {
+  color: var(--primary);
+}
+
+.main {
+  padding: 0 80px;
+}
+
+.space-divider {
+  display: inline-block;
+  height: 85px;
+}
+
+.btn {
+  background-color: rgba(255, 0, 0, 0.683);
+  color: white;
+  border-radius: 10px;
+  padding: 12px 20px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+  color: white !important;
+}
+
+.form-control {
+  border-width: 2px !important;
+  height: 50px ;
+  border-radius: 10px;
+}
+
+.form-control:focus {border-color: white!important;
+  -webkit-box-shadow: none!important;
+      -moz-box-shadow: none!important;
+      box-shadow: none!important;
+  }
+
+
+  .hero-logo-1{
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-style: italic;
+    color: red;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: red;
+}
+.hero-logo-2{
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-style: italic;
+    color: skyblue;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgba(131, 76, 174, 0.972);
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    padding: 0 10px;
+  }
+
+  .hero-logo-1,.hero-logo-2{
+    font-size: 25px;
+  }
 }

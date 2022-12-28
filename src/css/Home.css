@@ -1,0 +1,43 @@
+.posts {
+    background-color:rgba(255, 255, 255, 0.065);
+    border-radius: 20px;
+}
+
+.post-card {
+    background-color: var(--primary);
+    border-radius: 20px;
+    transition: all .3s ease;
+    position: relative;
+}
+
+.post-card:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.posts a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.post-card img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.post-card .content {
+    padding: 20px 18px;
+}
+
+.post-card .content p{
+    font-size: 17px;
+}
+
+.subscribe .card {
+    background-color:rgba(255, 255, 255, 0.065);
+    border-radius: 20px;
+}
+
+.subscribe .card input {
+    background-color: transparent;
+    color: white;
+}

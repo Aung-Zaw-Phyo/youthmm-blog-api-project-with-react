@@ -1,0 +1,10 @@
+.footer-section .card{
+    background-color: var(--nav);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-bottom: -20px;
+}
+
+.social-icon {
+    color: white !important;
+}
