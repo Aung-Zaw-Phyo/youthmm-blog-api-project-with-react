@@ -34,7 +34,7 @@ const Footer = () => {
                               </li>
                               
                               <li>
-                                  <Link to='' onclick="logout()" className="text-decoration-none ">Logout</Link>
+                                  <Link to='' onClick="logout()" className="text-decoration-none ">Logout</Link>
                               </li>
                           </ul>
                       </div>

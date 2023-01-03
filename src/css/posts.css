@@ -1,0 +1,71 @@
+.search-title {
+    position: relative;
+}
+
+
+.search-title::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: red;
+    animation: smooth 2.5s linear 2s infinite alternate;
+    transform: scaleX(0);
+}
+
+@keyframes smooth {
+    from {
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scaleX(0);
+    }
+}
+
+.more, .less{
+    cursor: pointer;
+    color: red;
+    font-size: 30px;
+    padding: 8px 25px;
+    border-radius: 10px;
+}
+
+.more i, .less i {
+    margin: 0;
+    padding: 0;
+}
+
+.more:hover, .less:hover {
+    background-color: rgba(240, 248, 255, 0.049);
+}
+
+.more .first, .less .first {
+    animation: firstUpDown .5s linear 2s infinite alternate;
+}
+
+.more .second, .less .second {
+    animation: secondUpDown .5s linear 2s infinite alternate;
+}
+
+@keyframes firstUpDown {
+    from {
+        transform: translateY(-3px);
+    }
+
+    to {
+        transform: translateY(3px);
+    }
+}
+
+@keyframes secondUpDown {
+    from {
+        transform: translateY(3px);
+    }
+
+    to {
+        transform: translateY(-3px);
+    }
+}

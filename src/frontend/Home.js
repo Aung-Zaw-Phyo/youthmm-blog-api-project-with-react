@@ -2,25 +2,11 @@ import React from 'react'
 import Post from './components/Post.js'
 import './../css/Home.css'
 import banner from './../img/banner.svg'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import axios from 'axios'
 
-const url = 'http://127.0.0.1:1000/api/blogs';
 
-const Home = () => {
-  const [posts, setPosts] = useState(null)
 
-  useEffect(() => {
-      axios.get(url)
-      .then( (res) => {
-        setPosts(res.data);
-        
-      }).catch( (error) => {
-        console.log(error)
-      })
-  }, [])
-  console.log(posts !== null  ? posts.data[0].title : '')
+const Home = (props) => {
+  
   return (
     <div className='main'>
          <div className="row g-2 py-3">
@@ -38,10 +24,20 @@ const Home = () => {
 
           <div className="posts p-3 py-4 my-3">
 
-            <div className='row g-2'>
-              <Post/>
-              <Post/>
-              <Post/>
+            <div className='row g-2 align-items-stretch'>
+              { 
+                props.latestBlog ? 
+                props.latestBlog.map( (blog, i) => {
+                    return (
+                      <div className="col-lg-4 p-3"  key={i}>
+                        <Post blog={blog} />
+                      </div>
+                    )
+                  } )
+                  : ( 
+                    <div className='text-center py-3 text-danger'>NO BLOG FOUND!</div>
+                  )
+              }
             </div>
 
           </div>
